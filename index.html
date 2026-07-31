@@ -103,13 +103,96 @@
     </section>
 
     <!-- ===================== HABILIDADES / INTERESES ===================== -->
-    <section id="habilidades" aria-labelledby="habilidades-titulo">
-      <!-- TODO (Commit 4): List Group / Badges / Rounded Pills -->
+    <section id="habilidades" class="container py-5" aria-labelledby="habilidades-titulo">
+      <h2 id="habilidades-titulo" class="mb-4 text-center">Habilidades e intereses</h2>
+
+      <div class="row justify-content-center g-4">
+
+        <!-- List Group con habilidades principales -->
+        <div class="col-12 col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Redes y ciberseguridad
+              <span class="badge bg-primary rounded-pill">Interés académico</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Programación
+              <span class="badge bg-primary rounded-pill">En aprendizaje</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Soporte técnico
+              <span class="badge bg-primary rounded-pill">Diagnóstico y mantenimiento</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Ofimática
+              <span class="badge bg-primary rounded-pill">Microsoft Office / Workspace</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Inglés
+              <span class="badge bg-primary rounded-pill">Nivel B2</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Rounded pills con tecnologías / herramientas puntuales -->
+        <div class="col-12 col-md-6">
+          <h3 class="h5">Tecnologías y herramientas</h3>
+          <!-- TODO: ajusta o agrega las tecnologías que realmente manejas -->
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill text-bg-secondary">HTML5</span>
+            <span class="badge rounded-pill text-bg-secondary">CSS3</span>
+            <span class="badge rounded-pill text-bg-secondary">Bootstrap</span>
+            <span class="badge rounded-pill text-bg-secondary">SQL Server</span>
+            <span class="badge rounded-pill text-bg-secondary">Linux</span>
+            <span class="badge rounded-pill text-bg-secondary">Redes / SNMP</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- ===================== PROYECTOS / PASATIEMPOS ===================== -->
-    <section id="proyectos" aria-labelledby="proyectos-titulo">
-      <!-- TODO (Commit 5): Mínimo 3 Cards de Bootstrap -->
+    <section id="proyectos" class="container py-5" aria-labelledby="proyectos-titulo">
+      <h2 id="proyectos-titulo" class="mb-4 text-center">Proyectos y pasatiempos</h2>
+      <!-- TODO: cambié imágenes por placeholders. Reemplaza src, textos y enlaces por tus datos reales -->
+
+      <div class="row g-4">
+
+        <!-- Card 1: proyecto técnico -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/proyecto1.jpg" class="card-img-top" alt="Captura del proyecto mini-compilador Pingüino">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Mini-compilador </h3>
+              <p class="card-text">Compilador desarrollado en Python con IDE web, resaltado de sintaxis y árbol de derivación visual.</p>
+              <a href="https://github.com/Alan-Josue-Luna-Cardona/Ping-ino" class="btn btn-outline-primary mt-auto" target="_blank" rel="noopener">Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: proyecto técnico -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/dibujo1.png" class="card-img-top" alt="Captura del proyecto SOAP vs REST">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Dibujo de Super Mario</h3>
+              <p class="card-text">Primer intento de dibujo a mano alzada de un personaje de Super Mario.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: pasatiempo -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/dibujo2.png" class="card-img-top" alt="Ilustración representando dibujo digital">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Dibujo logo personal</h3>
+              <p class="card-text">Practica de dibujo minimalista para crear un logo único.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- ===================== VISIÓN PROFESIONAL ===================== -->
