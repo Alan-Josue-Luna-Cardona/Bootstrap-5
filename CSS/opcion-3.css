@@ -1,0 +1,137 @@
+/* ============================================
+   OPCIÓN 3 — "Táctico oscuro / archivo de campo"
+   Ambiente tenso y contenido: tonos casi-negro y
+   verde oliva desaturado, acentos rojo sangre mínimos,
+   tipografía tipo máquina de escribir / informe militar.
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Oswald:wght@400;500;600&display=swap');
+
+:root {
+  --color-primario: #1a1c17;      /* casi negro con matiz verdoso */
+  --color-primario-claro: #2e3226;
+  --color-acento: #7a8a5c;        /* verde oliva apagado */
+  --color-acento-2: #8c2f2f;      /* rojo sangre, uso mínimo */
+  --color-fondo: #12130f;
+  --color-superficie: #1f2119;
+  --color-texto: #d8d6cc;
+  --color-texto-suave: #8a8a7c;
+
+  --fuente-titulo: 'Special Elite', 'Courier New', monospace;
+  --fuente-texto: 'Oswald', sans-serif;
+
+  --sombra-suave: 0 6px 18px rgba(0, 0, 0, 0.6);
+  --sombra-hover: 0 0 0 1px var(--color-acento-2);
+  --radio-borde: 2px;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: var(--fuente-titulo);
+  color: var(--color-texto);
+  letter-spacing: 0.03em;
+}
+
+.navbar {
+  background-color: var(--color-primario);
+  border-bottom: 1px solid var(--color-acento);
+}
+
+.navbar-brand { color: var(--color-acento); font-size: 1.1rem; }
+
+.navbar .nav-link {
+  color: var(--color-texto-suave);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.navbar .nav-link:hover { color: var(--color-acento-2); }
+
+header {
+  background: radial-gradient(ellipse at center, var(--color-primario-claro) 0%, var(--color-fondo) 80%);
+}
+
+header h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+
+header .lead {
+  color: var(--color-texto-suave);
+  font-style: italic;
+  border-left: 2px solid var(--color-acento-2);
+  padding-left: 0.75rem;
+}
+
+header img {
+  border: 1px solid var(--color-acento);
+  filter: grayscale(35%) contrast(1.05);
+  box-shadow: var(--sombra-suave);
+}
+
+section { background-color: var(--color-fondo); }
+section:nth-of-type(even) { background-color: var(--color-superficie); }
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  margin: 0.6rem auto 0;
+  background-color: var(--color-acento-2);
+}
+
+.list-group-item {
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 1px solid var(--color-primario-claro);
+  border-radius: var(--radio-borde);
+}
+
+.list-group-item:hover { border-color: var(--color-acento); }
+
+.badge.bg-primary { background-color: var(--color-acento); color: #12130f; }
+.badge.text-bg-secondary {
+  background-color: transparent;
+  color: var(--color-texto-suave);
+  border: 1px solid var(--color-texto-suave);
+}
+
+.card {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-primario-claro);
+  border-radius: var(--radio-borde);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  border-color: var(--color-acento-2);
+  box-shadow: var(--sombra-hover);
+}
+
+.card-img-top { filter: grayscale(20%) contrast(1.05); }
+.card-title { color: var(--color-texto); font-size: 1.1rem; }
+.card-text { color: var(--color-texto-suave); }
+
+.btn-outline-primary {
+  color: var(--color-acento);
+  border-color: var(--color-acento);
+  border-radius: var(--radio-borde);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-acento);
+  color: #12130f;
+}
+
+footer {
+  background-color: var(--color-primario);
+  color: var(--color-texto-suave);
+  border-top: 1px solid var(--color-acento);
+}
+
+footer .link-light:hover { color: var(--color-acento-2); }

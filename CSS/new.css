@@ -1,0 +1,135 @@
+/* ============================================
+   OPCIÓN 1 — "Táctico / Esports"
+   Energía de un HUD de juego de equipo futurista:
+   acentos diagonales, naranja+cian sobre fondo oscuro,
+   tipografía angular y geométrica.
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Chakra+Petch:wght@400;500;600&display=swap');
+
+:root {
+  --color-primario: #0e1a26;      /* azul-carbón casi negro */
+  --color-primario-claro: #1c3a4f;
+  --color-acento: #ff9f1c;        /* naranja HUD */
+  --color-acento-2: #00c2d1;      /* cian de contraste */
+  --color-fondo: #0b1319;
+  --color-superficie: #14222c;
+  --color-texto: #e8f1f5;
+  --color-texto-suave: #9fb3bf;
+
+  --fuente-titulo: 'Rajdhani', sans-serif;
+  --fuente-texto: 'Chakra Petch', sans-serif;
+
+  --sombra-suave: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --sombra-hover: 0 0 24px rgba(255, 159, 28, 0.35);
+  --radio-borde: 2px; /* formas más angulares, casi rectas */
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+}
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: var(--fuente-titulo);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.navbar {
+  background-color: var(--color-primario);
+  border-bottom: 2px solid var(--color-acento);
+}
+
+.navbar-brand { color: var(--color-acento); }
+
+.navbar .nav-link {
+  color: var(--color-texto-suave);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  position: relative;
+}
+
+.navbar .nav-link:hover { color: var(--color-acento-2); }
+
+header {
+  background: linear-gradient(120deg, var(--color-primario) 0%, var(--color-fondo) 70%);
+}
+
+header .lead { color: var(--color-acento-2); }
+
+header img {
+  border: 3px solid var(--color-acento);
+  clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%);
+  box-shadow: var(--sombra-suave);
+}
+
+section { background-color: var(--color-fondo); }
+section:nth-of-type(even) { background-color: var(--color-superficie); }
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin: 0.5rem auto 0;
+  background: linear-gradient(90deg, var(--color-acento), var(--color-acento-2));
+}
+
+.list-group-item {
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 1px solid var(--color-primario-claro);
+  clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.list-group-item:hover {
+  border-color: var(--color-acento);
+  transform: translateX(4px);
+}
+
+.badge.bg-primary { background-color: var(--color-acento-2); color: #001318; }
+.badge.text-bg-secondary {
+  background-color: transparent;
+  color: var(--color-acento);
+  border: 1px solid var(--color-acento);
+}
+
+.card {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-primario-claro);
+  border-radius: var(--radio-borde);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-acento);
+  box-shadow: var(--sombra-hover);
+}
+
+.card-title { color: var(--color-acento); }
+.card-text { color: var(--color-texto-suave); }
+
+.btn-outline-primary {
+  color: var(--color-acento-2);
+  border-color: var(--color-acento-2);
+  border-radius: var(--radio-borde);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-acento-2);
+  color: #001318;
+}
+
+footer {
+  background-color: var(--color-primario);
+  color: var(--color-texto-suave);
+  border-top: 2px solid var(--color-acento);
+}
+
+footer .link-light:hover { color: var(--color-acento); }
