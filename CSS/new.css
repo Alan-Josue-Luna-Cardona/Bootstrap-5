@@ -133,3 +133,38 @@ footer {
 }
 
 footer .link-light:hover { color: var(--color-acento); }
+
+/* ============================================
+   Accesibilidad y ajuste para navbar sticky
+   (Commit 9)
+   ============================================ */
+
+/* Enlace "saltar al contenido": oculto hasta recibir foco por teclado */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0.5rem;
+  z-index: 2000;
+  background-color: var(--color-acento);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* Evita que el navbar sticky tape el inicio de cada sección al navegar por anclas */
+section,
+header #inicio {
+  scroll-margin-top: 90px;
+}
+
+/* Foco visible consistente para navegación por teclado */
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 2px;
+}
